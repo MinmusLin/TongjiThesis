@@ -40,6 +40,8 @@
 
 可在 \cs{thesistitle} 与 \cs{thesistitleeng} 中使用 \verb|\\| 为封面标题手动添加换行，信息说明页标题会自动移除这些换行。若中英文摘要页标题需要使用独立换行位置，可在 \verb|chapters/metadata.tex| 中设置 \cs{abstracttitle}\verb|{摘要中文标题}{摘要中文副标题}| 与 \cs{abstracttitleeng}\verb|{Abstract English Title}{Abstract English Subtitle}|；未设置 \cs{abstracttitle} 与 \cs{abstracttitleeng} 时，中英文摘要页标题会沿用 \cs{thesistitle} 与 \cs{thesistitleeng}，并自动移除这些换行。
 
+\noindent\textbf{注意：}\cs{abstracttitle} 与 \cs{abstracttitleeng} 设置的是摘要页中展示的\textbf{论文标题}，而非摘要本身的标题（摘要标题固定为「摘要」与「Abstract」）。
+
 \section{文档结构}
 
 \verb|main.tex| 已预置了完整的论文结构，用户只需修改各 \verb|\input| 文件的内容：
