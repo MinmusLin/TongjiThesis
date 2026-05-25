@@ -404,6 +404,13 @@
 % Line spacing
 \setstretch{\tjlinespread}  % 设置全文行距
 
+% 禁止 twoside 模式下拉伸垂直间距
+% book 文档类在 twoside 模式下默认启用 \flushbottom，强制所有页面底部对齐，
+% 这会拉伸 \parskip 等带 stretch 的垂直间距，导致标题附近的空行行距不均匀。
+% \raggedbottom 允许页面底部自然变化，保证全文行距一致。
+% 使用 \AtEndOfClass 确保在所有 class 级代码执行完毕后覆盖。
+\AtEndOfClass { \raggedbottom }
+
 % ==========================================
 % Page Layout
 % ==========================================
@@ -1090,6 +1097,8 @@
 }
 
 % 论文基本信息配置
+\newif\iftj@abstracttitle@set
+\newif\iftj@abstracttitleeng@set
 \newcommand{\school}[1]{\def\tongjischool{#1}}
 \newcommand{\major}[1]{\def\tongjimajor{#1}}
 \newcommand{\student}[2]{\def\tongjiauthornumber{#1}\def\tongjiauthor{#2}}
