@@ -1097,8 +1097,6 @@
 }
 
 % 论文基本信息配置
-\newif\iftj@abstracttitle@set
-\newif\iftj@abstracttitleeng@set
 \newcommand{\school}[1]{\def\tongjischool{#1}}
 \newcommand{\major}[1]{\def\tongjimajor{#1}}
 \newcommand{\student}[2]{\def\tongjiauthornumber{#1}\def\tongjiauthor{#2}}
